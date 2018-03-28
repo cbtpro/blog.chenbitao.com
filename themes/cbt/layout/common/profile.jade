@@ -1,0 +1,16 @@
+mixin profile()
+  - var profile = theme.customize.profile;
+  div.profile
+    div.profile-inner.inner
+      div.base-info.profile-block
+        img#avatar.my-avatar(src=(profile.gravatar ? gravatar(profile.gravatar, 128) : url_for(profile.avatar)))
+        h2#name= profile.name
+        h3#title= profile.title
+      div.article-info.profile-block
+        div.article-info-block
+        div.article-info-block
+      div.profile-block.social-links
+        table
+          tbody
+            tr
+              td

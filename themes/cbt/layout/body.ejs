@@ -1,0 +1,17 @@
+<div id="container">
+  <header id="header">
+    +header()
+  </header>
+  <div class="outer">
+    <aside id="profile">
+      +profile()
+    </aside>
+    <section id="main">
+      -page.posts.each(function(post){
+        +post(post, 'index')
+      -})
+    </section>
+  </div>
+  <div class="footer">
+  </div>
+</div>

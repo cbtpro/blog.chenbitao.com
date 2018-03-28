@@ -1,0 +1,14 @@
+<!-- article.ejs -->
+<section class='post-content'>
+    <%- post.content %>
+</section>
+<!-- 评论部分，post.comments判断是否开启评论，config.duoshuo_shortname和config.disqus_shortname来判断启用那种评论插件，这里优先判断了多说 -->
+<% if(post.comments){ %>
+    <section id="comments">
+    <% if (config.duoshuo_shortname){ %>
+            <%- partial('_partial/duoshuo') %>
+        <% }else if(config.disqus_shortname){ %>
+            <%- partial('_partial/disqus') %>
+        <% } %>
+    </section>
+<% } %>
