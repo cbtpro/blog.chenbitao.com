@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  
+  
+    
+    <entry>
+      <title><![CDATA[安装protractor报DNS错误]]></title>
+      <url>http://yoursite.com/2017/02/09/%E5%AE%89%E8%A3%85protractor%E6%8A%A5DNS%E9%94%99%E8%AF%AF/</url>
+      <content type="html"><![CDATA[<p>protractor是一个用于angularjs的自动化段对端测试运行工具,可以模拟用户交互,帮程序员验证angularjs的运行状况.<br>首先安装protractor</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm install -g protractor</div></pre></td></tr></table></figure>
+<p>然后更新webdriver-manager</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">webdriver-manager update</div></pre></td></tr></table></figure>
+<p>在执行这句命令的时候会报一个Hostname/IP doesn’t match certificate’s altnames的错误,猜测因为在后台下载<a href="http://selenium-release.storage.googleapis.com/" target="_blank" rel="external">http://selenium-release.storage.googleapis.com/</a>的时候在域名解析器里找不到正确的地址.而这个地址列出了selenium的发行包.</p>
+<p>直接执行启动命令</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">webdriver-manager start</div></pre></td></tr></table></figure>
+<p>可以看到报了个selenium是必须的部分.配置DNS服务地址为谷歌的DNS 8.8..8.8和8.8.4.4,再重新执行命令就可以了.</p>
+<p><img src="http://echo.chenbitao.com/googlednsconfig.png" alt="img"></p>
+]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[Hello World]]></title>
+      <url>http://yoursite.com/2017/01/25/%E4%BD%BF%E7%94%A8hexo%E5%86%99%E5%8D%9A%E5%AE%A2/</url>
+      <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
+]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[Ubuntu使用命令行永久更改显示器分辨率]]></title>
+      <url>http://yoursite.com/2016/10/02/Ubuntu%E4%BD%BF%E7%94%A8%E5%91%BD%E4%BB%A4%E8%A1%8C%E6%B0%B8%E4%B9%85%E6%9B%B4%E6%94%B9%E6%98%BE%E7%A4%BA%E5%99%A8%E5%88%86%E8%BE%A8%E7%8E%87/</url>
+      <content type="html"><![CDATA[<p>查看可以设置的分辨率</p>
+<pre>xrandr</pre>
+永久更改显示器分辨率
+<pre>xrandr --output Virtual1 --mode 1440x900</pre>]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[哪种模块化JavaScript写法是最棒的]]></title>
+      <url>http://yoursite.com/2016/08/17/%E5%93%AA%E7%A7%8D%E6%A8%A1%E5%9D%97%E5%8C%96JavaScript%E5%86%99%E6%B3%95%E6%98%AF%E6%9C%80%E6%A3%92%E7%9A%84/</url>
+      <content type="html"><![CDATA[<p>结构化写法,只是简单的将函数按功能放在不同的js文件中，算一个模块。</p>
+<p><pre>var sign = false;<br>function doSomeThing(sg) {<br>  //函数执行<br>  sg = true;<br>}<br>function main() {<br>  doSomeThing(sign);<br>}<br>main();</pre><br>使用时，直接调用函数名称和变量名称。缺点明显，单文件模块积少成多，就会出现变量名称重复、方法暴露在外层、随意更改对象状态等等问题。</p>
+<p>对象写法，开始有面向对象的感觉了。</p>
+<p><pre>var Student = {<br>  name: ‘张三’,<br>  study: function(subject) {<br>     console.log(this.name + ‘开始学习’ + subject);<br>  }<br>}<br>Student.study(‘历史’);<br>var Teacher = {<br>  name: ‘李老师’,<br>  teach: function(subject) {<br>    console.log(this.name + ‘开始教’ + subject);<br>  }<br>}<br>Teacher.teach(‘物理’);</pre><br>显而易见这种写法出现了相同的属性和函数，但是互相不冲突，所有这个对象的属性都可以封装到这个对象中，但是这仍然不是最优的写法。成员的变量仍然可以在外部通过Student.name = ‘李狗蛋’，而被修改。</p>
+<p>隐藏不想被公开的属性和函数</p>
+<p><pre>var Student = function() {<br>  var name = ‘张三’;<br>  var study = function(subject) {<br>    console.log(name + ‘开始学习’ + subject);<br>  }<br>  var truancy = function() {<br>    console.log(name + ‘逃课了’);<br>  }<br>  return {<br>    study: study<br>  }<br>}();</pre></p>
+<p>Student.study(‘中国现代史’);<br>这种写法隐藏了name属性，不能在外部直接更改name，同时也不允许在外部执行truancy函数，想暴露什么都可以在return里定义，起到了很好地保护作用。</p>
+<p>异步模型定义编程模式，也是我们常说的AMD规范。这种模式是目前非常流行的编程模式，nodejs、requirejs、angularjs等都是用这种模式来编写代码。</p>
+<p>这里以Nodejs为例</p>
+<p>hello.js</p>
+<p><pre>function hello(name) {</pre></p>
+<p>  console.log(‘hello, ‘ + name);</p>
+<p>}</p>
+<p>exports.hello = hello;<br>只要将hello模块安装后就可以使用了。</p>
+<p>使用方法</p>
+<p><pre>const http = require(‘http’);<br>const hello = require(‘hello’);<br>const hostname = ‘192.168.1.10’;<br>const prot = 8081;<br>const server = http.createServer((request, response) =&gt; {<br>  response.statusCode = 200;<br>  response.setHeader(‘Content-Type’, ‘text/plain’);<br>  response.end(‘Hello World’);<br>});<br>server.listen(port, hostname, () =&gt; {<br>  console.log(‘Server running at <a href="http://${hostname}:${port}" target="_blank" rel="external">http://${hostname}:${port}</a>‘);<br>  hello.hello(‘Sandy’);<br>});</pre><br>可以看到在AMD规范比较灵活，包含了结构化的写法、对象的写法以及AMD的define的写法。技术在进步，各种规范层出不穷，语言的语言越来越多样化，合理的组织结构让代码更加的简洁易读，所以并不限定某种写法。</p>
+]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[离线安装chrome商店的插件]]></title>
+      <url>http://yoursite.com/2016/07/18/%E7%A6%BB%E7%BA%BF%E5%AE%89%E8%A3%85chrome%E5%95%86%E5%BA%97%E7%9A%84%E6%8F%92%E4%BB%B6/</url>
+      <content type="html"><![CDATA[<p>想要安装谷歌插件，但是又没有网络怎么办？可以通过离线安装的方式进行安装。比如我现在在公司内网不能够上外网，我先在一台已经安装过了Visual-Event的电脑上找到它的ID,在chrome地址栏输入下面命令，打开chrome扩展程序页面,查看插件ID</p>
+<p><pre>chrome://extensions</pre><br><a href="http://echo.chenbitao.com/wp-content/uploads/2016/07/QQ截图20160718103422.jpg" target="_blank" rel="external"><img src="http://echo.chenbitao.com/wp-content/uploads/2016/07/QQ截图20160718103422.jpg" alt="QQ截图20160718103422"></a></p>
+<p>访问下面这个网址，直接用id搜索下载。</p>
+<p><pre><a href="http://chrome-extension-downloader.com/" target="_blank" rel="external">http://chrome-extension-downloader.com/</a></pre><br><a href="http://echo.chenbitao.com/wp-content/uploads/2016/07/QQ截图20160718103453.jpg" target="_blank" rel="external"><img src="http://echo.chenbitao.com/wp-content/uploads/2016/07/QQ截图20160718103453.jpg" alt="QQ截图20160718103453"></a></p>
+<p>复制crx到内网，在chrome地址栏输入下面命令，打开chrome扩展程序页面</p>
+<p><pre>chrome://extensions</pre><br>直接把下载的插件拖进去，点击确认就OK啦</p>
+]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[使用wordpress和群发工具群发邮件]]></title>
+      <url>http://yoursite.com/2016/05/05/%E4%BD%BF%E7%94%A8wordpress%E5%92%8C%E7%BE%A4%E5%8F%91%E5%B7%A5%E5%85%B7%E7%BE%A4%E5%8F%91%E9%82%AE%E4%BB%B6/</url>
+      <content type="html"><![CDATA[<p>登录<a href="http://echo.chenbitao.com/wp-login.php" target="_blank" rel="external">http://echo.chenbitao.com/wp-login.php</a></p>
+<p>登录成功后点击上方菜单进入设置</p>
+<p><img src="http://echo.chenbitao.com/wp-content/uploads/2016/05/050516_1352_wordpress1.png" alt=""></p>
+<p>开始设置</p>
+<p><img src="http://echo.chenbitao.com/wp-content/uploads/2016/05/050516_1352_wordpress2.png" alt=""></p>
+<p>获取SMTP Password，登录你想用来发送邮件的QQ好的邮箱，点击设置，点击账号</p>
+<p><img src="http://echo.chenbitao.com/wp-content/uploads/2016/05/050516_1352_wordpress3.png" alt=""></p>
+<p>开启pop3/SMTP服务</p>
+<p><img src="http://echo.chenbitao.com/wp-content/uploads/2016/05/050516_1352_wordpress4.png" alt=""></p>
+<p>经过简单的短信校验后，获取到密码</p>
+<p><img src="http://echo.chenbitao.com/wp-content/uploads/2016/05/050516_1352_wordpress5.png" alt=""></p>
+<p><img src="http://echo.chenbitao.com/wp-content/uploads/2016/05/050516_1352_wordpress6.png" alt=""></p>
+<p>将这个密码填入上面设置里的SMTP Password中。</p>
+<p>设置完成后点击上方菜单进入发送</p>
+<p><img src="http://echo.chenbitao.com/wp-content/uploads/2016/05/050516_1352_wordpress7.png" alt=""></p>
+<p>也可以直接访问页面<a href="http://echo.chenbitao.com/wp-admin/admin.php?page=send_test_email" target="_blank" rel="external">http://echo.chenbitao.com/wp-admin/admin.php?page=send_test_email</a></p>
+<p>修改内容成你需要的文本。</p>
+<p><img src="http://echo.chenbitao.com/wp-content/uploads/2016/05/050516_1352_wordpress8.png" alt=""></p>
+<p>确认邮件收到后，开始抓取协议。</p>
+<p>使用firefox进入到上面的发送页面。在页面上点击鼠标邮件，选择httpwatch。</p>
+<p><img src="http://echo.chenbitao.com/wp-content/uploads/2016/05/050516_1352_wordpress9.png" alt=""></p>
+<p>打开界面后，点击Record。然后点击Send Test Email按钮。记录完成后，点击Stop安妮停止录制。</p>
+<p><img src="http://echo.chenbitao.com/wp-content/uploads/2016/05/050516_1352_wordpress10.png" alt=""></p>
+<p><img src="http://echo.chenbitao.com/wp-content/uploads/2016/05/050516_1352_wordpress11.png" alt="">上面就是获取的协议，找到绿色的ux_email_to=，把后面红色的部分替换成</p>
+<p>&lt;$邮箱01地址$&gt;</p>
+<p>在群发助手目录下 “大战协议—-超级邮件群发系统\超级邮件群发系统”</p>
+<p>新建一个”wordpress协议”文件夹,文件夹里新建一个文本文件，名字默认，内容就是上一步替换过的内容。</p>
+<p>就可以通过这个协议来群发邮件了。</p>
+]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[Microsoft Office Word发布文章到WordPress]]></title>
+      <url>http://yoursite.com/2016/04/26/Microsoft%20Office%20Word%E5%8F%91%E5%B8%83%E6%96%87%E7%AB%A0%E5%88%B0WordPress/</url>
+      <content type="html"><![CDATA[<h2 id="编写word文档"><a href="#编写word文档" class="headerlink" title="编写word文档"></a>编写word文档</h2><h2 id="发布到博客"><a href="#发布到博客" class="headerlink" title="发布到博客"></a>发布到博客</h2><p><img src="http://echo.chenbitao.com/wp-content/uploads/2016/04/042616_0312_MicrosoftOf1.png" alt=""></p>
+<h2 id="注册博客账户-这里的注册并不是注册新的账户，而是将你博客的账户注册到word软件中"><a href="#注册博客账户-这里的注册并不是注册新的账户，而是将你博客的账户注册到word软件中" class="headerlink" title="注册博客账户(这里的注册并不是注册新的账户，而是将你博客的账户注册到word软件中)"></a>注册博客账户(这里的注册并不是注册新的账户，而是将你博客的账户注册到word软件中)</h2><p><img src="http://echo.chenbitao.com/wp-content/uploads/2016/04/042616_0312_MicrosoftOf2.png" alt=""></p>
+<p>## </p>
+<h2 id="配置地址"><a href="#配置地址" class="headerlink" title="配置地址"></a>配置地址</h2><p><img src="http://echo.chenbitao.com/wp-content/uploads/2016/04/042616_0312_MicrosoftOf3.png" alt=""></p>
+<h2 id="发布"><a href="#发布" class="headerlink" title="发布"></a>发布</h2><p><img src="http://echo.chenbitao.com/wp-content/uploads/2016/04/042616_0312_MicrosoftOf4.png" alt=""></p>
+<h2 id="发布成功"><a href="#发布成功" class="headerlink" title="发布成功"></a>发布成功</h2><p><img src="http://echo.chenbitao.com/wp-content/uploads/2016/04/042616_0312_MicrosoftOf5.png" alt=""></p>
+]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[Mac 使用Apache和PHP]]></title>
+      <url>http://yoursite.com/2016/02/19/Mac%20%E4%BD%BF%E7%94%A8Apache%E5%92%8CPHP/</url>
+      <content type="html"><![CDATA[<p>Mac OS X内置了Apache和PHP，所以我们只需要简单的配置就可以使用PHP。我这里以Mac OS X EI Capitan 版本10.11.3为例子。</p>
+<p>下面的操作都是在终端中操作：</p>
+<p>启动apache服务:sudo apachectl start</p>
+<p>显示apache版本:sudo apachectl -v</p>
+<p>停止apache服务:sudo apachectl stop</p>
+<p>启动服务后，可以在地址栏输入localhost或者ip地址来访问，端口是80.显示it work!表示apache服务启动。</p>
+<p>apache的默认根目录在/Library/WebServer/Documents下，可以在Finder里输入Shift + commond + G来访问指定目录。</p>
+<p>配置php：</p>
+<p>开启php：sudo vi /etc/apache2/httpd.conf，将’#LoadModule php5_module libexec/apache2/libphp5.so’前的井号删除掉，wq保存。</p>
+<p><a href="http://echo.chenbitao.com/wp-content/uploads/2016/02/QQ20160219-0@2x.png" target="_blank" rel="external"><img src="http://echo.chenbitao.com/wp-content/uploads/2016/02/QQ20160219-0@2x.png" alt="QQ20160219-0@2x"></a></p>
+<p>复制php配置文件：sudo cp /etc/php.ini.default /etc/php.ini</p>
+<p>此时php功能已经打开，可以在 /Library/WebServer/Documents目录下新建一个phptest.php文件，来测试能否正常访问php文件，文件内容如下：</p>
+<p><a href="http://echo.chenbitao.com/wp-content/uploads/2016/02/QQ20160219-2@2x.png" target="_blank" rel="external"><img src="http://echo.chenbitao.com/wp-content/uploads/2016/02/QQ20160219-2@2x.png" alt="QQ20160219-2@2x"></a></p>
+<p>&nbsp;</p>
+<p>显示以下内容则PHP开启完成</p>
+<p><a href="http://echo.chenbitao.com/wp-content/uploads/2016/02/QQ20160219-3@2x.png" target="_blank" rel="external"><img src="http://echo.chenbitao.com/wp-content/uploads/2016/02/QQ20160219-3@2x.png" alt="QQ20160219-3@2x"></a></p>
+]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[让Apache支持PHP语言]]></title>
+      <url>http://yoursite.com/2016/01/30/%E8%AE%A9Apache%E6%94%AF%E6%8C%81PHP%E8%AF%AD%E8%A8%80/</url>
+      <content type="html"><![CDATA[<p>继上篇：<a href="http://echo.chenbitao.com/?p=46" target="_blank" rel="external">使用ApacheServer</a></p>
+<p>Apache是一个容器，但是默认是不支持PHP语言的，那么我们需要让Apache能够帮助我们学习和使用PHP。</p>
+<p>先从PHP的官网下载PHP的安装包：<a href="http://php.net/downloads.php" target="_blank" rel="external">http://php.net/downloads.php</a></p>
+<p>我们用的Window操作系统，那么选择Windows downloads。</p>
+<p><a href="http://echo.chenbitao.com/wp-content/uploads/2016/01/QQ截图20160129233453.png" target="_blank" rel="external"><img src="http://echo.chenbitao.com/wp-content/uploads/2016/01/QQ截图20160129233453.png" alt="QQ截图20160129233453"></a>    一定要下载编译过的安装包，我们以VC14(注1)编译的64位Thread Safe的为例子。</p>
+<p><a href="http://echo.chenbitao.com/wp-content/uploads/2016/01/QQ截图20160129233814.png" target="_blank" rel="external"><img src="http://echo.chenbitao.com/wp-content/uploads/2016/01/QQ截图20160129233814.png" alt="QQ截图20160129233814"></a></p>
+<p>下载解压后，将文件名改成php7，并且复制到你要安装的目录下。我这里放在了C盘根目录。</p>
+<p>然后进入到php7目录，将php.ini-development复制一份重命名为php.ini。</p>
+<p>要修改几处地方:</p>
+<p>设置扩展文件所在的目录：extension_dir=”./“更改为extension_dir=”C:/php7/ext/“</p>
+<p>开启常用的扩展：</p>
+<p>extension=php_gd2.dll</p>
+<p>extension=php_mbstring.dll</p>
+<p>extension=php_mysqli.dll</p>
+<p>php的配置文件中;表示注释掉该行，所以记住要开启某个扩展，一定要去掉前面的;.</p>
+<p>其他的配置无需理会，用到的时候再去学习如何配置。</p>
+<p>接下来要配置Apache：</p>
+<p>加载处理PHP的模块：在大概180行左右添加<strong>loadModule php7_module “C:/php7/php7apache2_4.dll” ##加载php处理模块</strong></p>
+<p>可以检查下这个文件是不是存在：</p>
+<p><a href="http://echo.chenbitao.com/wp-content/uploads/2016/01/QQ截图20160129235635.png" target="_blank" rel="external"><img src="http://echo.chenbitao.com/wp-content/uploads/2016/01/QQ截图20160129235635.png" alt="QQ截图20160129235635"></a>  在Apache中添加识别PHP的MIME类型：在AddType application/x-gzip .gz .tgz下一行添加</p>
+<p>AddType application/x-httpd-php .php  ##php文件的MIME类型</p>
+<p>AddType application/x-httpd-source .phps  ##phps文件的MIME类型</p>
+<p>设置PHP配置文件目录:在最后一行添加</p>
+<p>PHPIniDir “c:/php7”  ##指定php.ini目录</p>
+<p>保存后，之前配置的php.ini复制到C:/WINDOWS/下，重启Apache服务。</p>
+<p>我们来做一个简单的PHP页面访问测试：</p>
+<p>在Apache的Web根目录下新建一个phptest.php的文件，输入以下内容：</p>
+<p>&lt;?php</p>
+<p>phpinfo();</p>
+<p>?&gt;</p>
+<p>打开浏览器，输入<a href="http://localhost/phptest.php,如果输出了php的版本信息，表示配置成功！" target="_blank" rel="external">http://localhost/phptest.php,如果输出了php的版本信息，表示配置成功！</a></p>
+<p><a href="http://echo.chenbitao.com/wp-content/uploads/2016/01/QQ截图20160130011055.png" target="_blank" rel="external"><img src="http://echo.chenbitao.com/wp-content/uploads/2016/01/QQ截图20160130011055.png" alt="QQ截图20160130011055"></a></p>
+<p>开始愉快的PHP学习之旅吧！</p>
+<p>注解1：VC14表示是由Visual C++ Redistribute 2015编译的，需要安装对应的版本，可以看到安装的时候后面显示的是14.0.23026，这个就是VC14。如果在启动服务的时候报错，安装VC14后就能解决。</p>
+<p><a href="http://echo.chenbitao.com/wp-content/uploads/2016/01/QQ截图20160130003938.png" target="_blank" rel="external"><img src="http://echo.chenbitao.com/wp-content/uploads/2016/01/QQ截图20160130003938.png" alt="QQ截图20160130003938"></a></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[使用ApacheServer]]></title>
+      <url>http://yoursite.com/2016/01/29/%E4%BD%BF%E7%94%A8ApacheServer/</url>
+      <content type="html"><![CDATA[<p>继上篇：<a href="http://echo.chenbitao.com/?p=41" target="_blank" rel="external">安装Apache Server</a></p>
+<p>启动Apache服务器之前，可以用<strong>httpd -n Apache2.4</strong>来检查配置文件是否正确。</p>
+<p>解释一下这里命令的意思，-n表示参数后的是name同一台机器可以安装多个Apache服务，在安装的时候可以在httpd -k install -n 名称来安装多个服务。如果不指定名字，默认操作唯一安装的Apache服务。</p>
+<p>常用的操作命令：</p>
+<p>httpd -k start</p>
+<p>httpd -k stop或httpd -k shutdown</p>
+<p>httpd -k</p>
+<p>http -k install</p>
+<p>http -k uninstall</p>
+<p>这里的install和uninstall表示安装成一个服务和卸载掉服务。</p>
+<p>还有其他参数，我们后面用到的时候再介绍。</p>
+]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[安装Apache Sever]]></title>
+      <url>http://yoursite.com/2016/01/29/%E5%AE%89%E8%A3%85Apache%20Sever/</url>
+      <content type="html"><![CDATA[<p>我们要运行自己的应用就必须先安装一个容器，先从ApacheServer开始吧</p>
+<p>可以从bing上搜索Apahce的官网，或者直接访问<a href="http://httpd.apache.org/download.cgi" target="_blank" rel="external">http://httpd.apache.org/download.cgi</a>来下载。</p>
+<p>Apache HTTP Server X.X.XX(httpd) 字样的就是要下载的Apache，选择最近版本，会跳到下载的锚点部分，如果是如果是linux，选择.tar.bz2或者tar.gzde 包。这里因为操作系统是Window，所以选择Files for Microsoft Windows.当新手打开这个页面的时候肯定会蒙圈：打开的页面就是没有exe或者msi的安装包。这是因为Apache本身不提供已编译的安装包，只提供源码，如果自己无法编译，可以选择官方推荐的第三方提供的编译网站。</p>
+<p><a href="http://echo.chenbitao.com/wp-content/uploads/2016/01/QQ截图20160129230345.png" target="_blank" rel="external"><img src="http://echo.chenbitao.com/wp-content/uploads/2016/01/QQ截图20160129230345.png" alt="QQ截图20160129230345"></a>  我们用ApacheHaus来做示范。</p>
+<p>ApacheHaus列出了各个版本，包括各种组件、升级包。选择Apache 2.4 VC11下载，下载完成后解压，将Apache24放到你想要放的地方，接下来就开始安装了。</p>
+<p>安装先决条件：</p>
+<ol>
+<li>修改Apache24/conf/httpd.conf,将<strong>Define SRVROOT “/Apache24”</strong>修改成你的Apache24的目录下，我这里是<strong>Define SRVROOT “C:\developer\container\Apache24”</strong></li>
+<li><p>以管理员身份运行cmd.exe，进入到Apache24下的bin目录。<br>开始安装：</p>
+</li>
+<li><p>执行<strong>httpd -k install</strong></p>
+</li>
+<li>会输出[error]Apache2.4: Service is already install.<br>这个时候你检查你的服务，会发现多出了一个Apache24的服务项，可以像普通服务一样启动和停止。</li>
+</ol>
+<p>启动后可以通过<a href="http://localhost来打开Apache的首页检查是否启动成功。" target="_blank" rel="external">http://localhost来打开Apache的首页检查是否启动成功。</a></p>
+<p>开始享受Apache给你带来的热情服务吧！</p>
+<p>补充：</p>
+<p>在Apache24/bin下有个ApacheMonitor，可以可视化的对Apache进行管理。</p>
+<p>注意apache的端口默认是80,如果启动失败，用netstat -aon|findstr “80”来检测80端口是否被占用。</p>
+<p>也可以修改apache/conf/httpd.conf修改Listen 80的数字部分来修改默认端口，修改后保存重启即可生效。</p>
+<p>停止服务使用<strong>httpd -k install</strong>或者<strong>httpd -k shutdown</strong></p>
+<p>执行安装命令时，如果提示缺失组件或者报任何错误，百度电脑专家是个很好的工具，可以用他来修复，修复完成后继续安装。</p>
+<p><a href="http://echo.chenbitao.com/wp-content/uploads/2016/01/QQ截图20160129231951.png" target="_blank" rel="external"><img src="http://echo.chenbitao.com/wp-content/uploads/2016/01/QQ截图20160129231951.png" alt="QQ截图20160129231951"></a></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[学习肌球蛋白]]></title>
+      <url>http://yoursite.com/2015/11/24/%E5%AD%A6%E4%B9%A0%E8%82%8C%E7%90%83%E8%9B%8B%E7%99%BD/</url>
+      <content type="html"><![CDATA[<p><a href="http://echo.chenbitao.com/wp-content/uploads/2015/11/内啡肽.gif" target="_blank" rel="external"><img src="http://echo.chenbitao.com/wp-content/uploads/2015/11/内啡肽.gif" alt="内啡肽"></a></p>
+<p>这是一个肌球蛋白，拖着一个内啡肽，走在一个单纤维上，然后大摇大摆的走过你的大脑皮层，这是让你产生快乐的物质，它为了让你开心每天辛苦的拖着这个大东西，你还有什么理由难过呢？</p>
+]]></content>
+    </entry>
+    
+  
+  
+</search>
